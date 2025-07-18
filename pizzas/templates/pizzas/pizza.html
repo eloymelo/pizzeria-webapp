@@ -1,0 +1,25 @@
+{% extends "pizzas/base.html" %}
+
+{% block header %}
+  <h2>{{ pizza.name }}</h2>
+{% endblock header %}
+
+{% block content %}
+  <p>Toppings:</p>
+  <ul>
+    {% for topping in toppings %}
+      <li>{{ topping.name }}</li>
+    {% empty %}
+      <li>This pizza has no toppings listed yet.</li>
+    {% endfor %}
+  </ul>
+  
+  <hr>
+  <p>Add a new topping:</p>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">Add topping</button>
+  </form>
+  
+{% endblock content %}

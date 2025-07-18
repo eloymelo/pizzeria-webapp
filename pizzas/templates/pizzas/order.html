@@ -1,0 +1,27 @@
+{% extends "pizzas/base.html" %}
+
+{% block header %}
+  <h2>Place your order</h2>
+{% endblock header %}
+
+{% block content %}
+
+  {% if selected_toppings %}
+    <p>Your order has been placed! Here is the summary:</p>
+    <ul>
+    {% for topping in selected_toppings %}
+        <li>{{ topping.name }}</li>
+    {% endfor %}
+    </ul>
+    <p><strong>Total Price: ${{ total_price|floatformat:2 }}</strong></p>
+    <hr>
+    <p>Place another order:</p>
+  {% endif %}
+
+  <form action="{% url 'pizzas:order' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">Place Order</button>
+  </form>
+
+{% endblock content %}
