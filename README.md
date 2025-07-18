@@ -1,34 +1,27 @@
 # Pizzeria - Web Application
 
-This is the web application version of the Pizzeria project, built with Python and the Django framework. It provides a web interface for users to view different pizzas and the toppings available for each one.
+This is the main web application for the Pizzeria project, built with Python and the Django framework. The goal of this repository is to practice and demonstrate web development skills. This is a work in progress.
 
 ## Project Ecosystem
 
-This application is part of a larger project-driven learning exercise. The related components are:
+This is one of three related repositories for the Pizzeria project:
+* **[pizzeria-cli](https://github.com/eloymelo/pizzeria-cli):** The foundational Python logic in a command-line interface.
+* **[pizzeria-database](https://github.com/eloymelo/pizzeria-database):** The SQL scripts for designing the database schema.
+* **pizzeria-webapp (This one):** The final web application built with Django.
 
-* **[pizzeria-cli](https://github.com/eloymelo/pizzeria-cli):** The original command-line application containing the core Python logic.
-* **[pizzeria-database](https://github.com/eloymelo/pizzeria-database):** The SQL scripts used to design the database schema.
+## Current Status
 
-## Current Features
+* Users can view a list of pizzas and the toppings for each pizza.
+* A form allows for adding new toppings to a pizza's definition via the web interface.
+* The Django admin site is fully configured for data management.
+* The app currently uses Django's default **SQLite** database. It has **not** yet been integrated with the schema from the `pizzeria-database` project.
 
-* Displays a list of all available pizzas on the main page.
-* Provides a detail page for each pizza, listing its current toppings.
-* Includes a functional web form to add new toppings to a specific pizza.
-* The Django admin site is configured for managing all data.
-* Styled with the Bootstrap framework for a clean, responsive layout.
-
-## How to Run (for Development)
-
-1.  Clone this repository to your local machine.
-2.  Create and activate a virtual environment.
-3.  Install the project's dependencies: `pip install -r requirements.txt`
-4.  Apply the database migrations: `python3 manage.py migrate`
-5.  Create a superuser account: `python3 manage.py createsuperuser`
-6.  Run the development server: `python3 manage.py runserver`
-7.  Access the site at `http://localhost:8000/`.
+## Future Plans
+* Implement a full ordering system.
+* Add a user registration and authentication system.
+* Integrate a PostgreSQL database based on the designed schema.
 
 ## Technologies Used
-
 * Python
 * Django
 * Bootstrap
