@@ -31,4 +31,4 @@ This application is part of a larger project-driven learning exercise. The relat
 
 * Python
 * Django
-* Bootstrap3
+* Bootstrap
