@@ -1,43 +1,34 @@
 # Pizzeria - Web Application
 
-This is the web application version of the Pizzeria project, built with Python and the Django framework. It provides an interface for users to view pizzas and their toppings.
+This is the web application version of the Pizzeria project, built with Python and the Django framework. It provides a web interface for users to view different pizzas and the toppings available for each one.
 
-This repository contains the application logic. The database schema and SQL practice queries are maintained in the separate [`pizzeria-database`](https://github.com/eloymelo/pizzeria-database) repository.
+## Project Ecosystem
 
-## Current Status
+This application is part of a larger project-driven learning exercise. The related components are:
 
-The project is in the initial setup phase.
-* The core Django project and `pizzas` app have been created.
-* Database models for `Pizza` and `Topping` have been defined.
-* The Django admin site has been configured to manage pizzas and toppings.
+* **[pizzeria-cli](https://github.com/eloymelo/pizzeria-cli):** The original command-line application containing the core Python logic.
+* **[pizzeria-database](https://github.com/eloymelo/pizzeria-database):** The SQL scripts used to design the database schema.
+
+## Current Features
+
+* Displays a list of all available pizzas on the main page.
+* Provides a detail page for each pizza, listing its current toppings.
+* Includes a functional web form to add new toppings to a specific pizza.
+* The Django admin site is configured for managing all data.
+* Styled with the Bootstrap framework for a clean, responsive layout.
 
 ## How to Run (for Development)
 
 1.  Clone this repository to your local machine.
-2.  Create and activate a virtual environment:
-    ```sh
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-3.  Install the project's dependencies:
-    ```sh
-    pip install -r requirements.txt
-    ```
-4.  Apply the database migrations:
-    ```sh
-    python3 manage.py migrate
-    ```
-5.  Create a superuser account to access the admin site:
-    ```sh
-    python3 manage.py createsuperuser
-    ```
-6.  Run the development server:
-    ```sh
-    python3 manage.py runserver
-    ```
-7.  Access the site at `http://localhost:8000` and the admin panel at `http://localhost:8000/admin/`.
+2.  Create and activate a virtual environment.
+3.  Install the project's dependencies: `pip install -r requirements.txt`
+4.  Apply the database migrations: `python3 manage.py migrate`
+5.  Create a superuser account: `python3 manage.py createsuperuser`
+6.  Run the development server: `python3 manage.py runserver`
+7.  Access the site at `http://localhost:8000/`.
 
 ## Technologies Used
 
 * Python
 * Django
+* Bootstrap3
